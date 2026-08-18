@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Table</title>
+    <link rel="stylesheet" href="act6.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1>CPU Scheduling</h1>
+
+        <div class="user-info">
+            <p><strong>Name:</strong> De Castro, Marrynel G.</p>
+            <p><strong>Section:</strong> 11-CPT 2</p>
+        </div>
+
+        <table class="scheduling-table">
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>AT</th>
+                    <th>BT</th>
+                    <th>CT</th>
+                    <th>TAT</th>
+                    <th>WT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P1</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>6</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>P2</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>P3</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>12</td>
+                    <td>7</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>P4</td>
+                    <td>15</td>
+                    <td>4</td>
+                    <td>19</td>
+                    <td>4</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="averages">
+            <span class="avg-tat">Average TAT = 5</span>
+            <span class="avg-wt">Average WT = 1.5</span>
+        </div>
+
+        <h2>Gantt Chart</h2>
+
+        <div class="gantt-chart">
+            <div class="block block-idle">
+                <div class="process">Idle</div>
+                <div class="time-range">
+                    <span class="start">0</span>
+                    <span class="end">2</span>
+                </div>
+            </div>
+            <div class="block block-p2">
+                <div class="process">P2</div>
+                <div class="time-range">
+                    <span class="end">5</span>
+                </div>
+            </div>
+            <div class="block block-p1">
+                <div class="process">P1</div>
+                <div class="time-range">
+                    <span class="end">10</span>
+                </div>
+            </div>
+            <div class="block block-p3">
+                <div class="process">P3</div>
+                <div class="time-range">
+                    <span class="end">12</span>
+                </div>
+            </div>
+            <div class="block block-p4">
+                <div class="process">P4</div>
+                <div class="time-range">
+                    <span class="end">19</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

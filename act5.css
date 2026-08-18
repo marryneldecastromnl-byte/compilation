@@ -1,0 +1,107 @@
+/* Page Animation */
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 1.2s ease-in-out;
+    background: #f8f8f8;
+}
+
+/* Header Table */
+table:first-of-type {
+    margin: auto;
+    animation: slideDown 1s ease;
+}
+
+/* Logo */
+table:first-of-type img {
+    transition: transform 0.4s ease;
+}
+
+table:first-of-type img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Center Heading */
+table:first-of-type td:nth-child(2) {
+    text-align: center;
+}
+
+/* Headings */
+h2, h3 {
+    color: darkred;
+    margin: 5px;
+    transition: color 0.3s ease, letter-spacing 0.3s ease,
+                transform 0.3s ease;
+}
+
+h2:hover, h3:hover {
+    color: crimson;
+    letter-spacing: 2px;
+    transform: scale(1.05);
+}
+
+/* Schedule Table */
+table:last-of-type {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    transition: box-shadow 0.4s ease;
+}
+
+table:last-of-type:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+th {
+    background: maroon;
+    color: white;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+th:hover {
+    background: crimson;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+td:hover {
+    background: #ffe599;
+    transform: scale(1.03);
+}
+
+/* Paragraph Animation */
+p {
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: darkred;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

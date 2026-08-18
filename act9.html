@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e8f4ff;
+            color: #102a43;
+            display: flex;
+            justify-content: center;
+            padding: 24px;
+        }
+        .container {
+            width: min(1080px, 100%);
+            background: #ffffff;
+            border-radius: 22px;
+            box-shadow: 0 24px 50px rgba(16, 49, 81, 0.12);
+            padding: 30px 34px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #0f3a70;
+        }
+        header p {
+            margin: 8px 0 0;
+            color: #4b6b86;
+        }
+        fieldset {
+            border: 1px solid #c9dff4;
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 24px;
+            background: #f7fbff;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: 700;
+            color: #0f3a70;
+        }
+        .photo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 22px;
+        }
+        .photo img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid #d9e8f9;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .input-box {
+            flex: 1;
+            min-width: 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .input-box label,
+        fieldset > label {
+            font-weight: 700;
+            color: #102a43;
+        }
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid #c7d8ea;
+            background: #ffffff;
+            color: #102a43;
+            font-size: 0.95rem;
+        }
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            border: 1px solid #c7d8ea;
+            border-radius: 14px;
+            background: #ffffff;
+            cursor: pointer;
+            color: #102a43;
+            font-size: 0.95rem;
+        }
+        .radio-group input,
+        .checkbox-group input {
+            accent-color: #0f3a70;
+        }
+        small {
+            color: #52667a;
+            font-size: 0.88rem;
+        }
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .buttons button {
+            padding: 12px 24px;
+            border-radius: 14px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .buttons .submit {
+            background: #0f3a70;
+            color: #ffffff;
+        }
+        .buttons .reset {
+            background: #f1f5f9;
+            color: #102a43;
+            border: 1px solid #c7d8ea;
+        }
+        @media (max-width: 760px) {
+            .row {
+                flex-direction: column;
+            }
+            .buttons {
+                justify-content: stretch;
+            }
+            .buttons button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <header>
+                <h1>Student Information Form</h1>
+                <p>Senior High School Enrollment • Grade 11</p>
+            </header>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="photo">
+                    <img src="nellie.jpg" alt="Student Photo" />
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="firstName">First Name</label>
+                        <input id="firstName" name="firstName" type="text" placeholder="First Name" />
+                    </div>
+                    <div class="input-box">
+                        <label for="lastName">Last Name</label>
+                        <input id="lastName" name="lastName" type="text" placeholder="Last Name" />
+                    </div>
+                    <div class="input-box">
+                        <label for="middleInitial">Middle Initial</label>
+                        <input id="middleInitial" name="middleInitial" type="text" placeholder="M" maxlength="2" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="email">Email Address</label>
+                        <input id="email" name="email" type="email" placeholder="example@mail.com" />
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" placeholder="********" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="age">Age</label>
+                        <input id="age" name="age" type="number" placeholder="Age" min="1" />
+                    </div>
+                    <div class="input-box">
+                        <label for="birthday">Birthday</label>
+                        <input id="birthday" name="birthday" type="date" />
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="contactNumber">Contact Number</label>
+                    <input id="contactNumber" name="contactNumber" type="tel" placeholder="0917 123 4567" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Student Information</legend>
+                <div class="input-box">
+                    <label for="studentId">Student ID</label>
+                    <input id="studentId" name="studentId" type="text" placeholder="Student ID" />
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="gradeLevel">Grade Level</label>
+                        <select id="gradeLevel" name="gradeLevel">
+                            <option value="">Select Grade Level</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="strand">Strand</label>
+                        <select id="strand" name="strand">
+                            <option value="">Select Strand</option>
+                            <option value="ICT">ICT</option>
+                            <option value="STEM">STEM</option>
+                            <option value="ABM">ABM</option>
+                            <option value="HUMSS">HUMSS</option>
+                            <option value="GAS">GAS</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male" /> Male</label>
+                    <label><input type="radio" name="gender" value="female" /> Female</label>
+                    <label><input type="radio" name="gender" value="prefer_not_to_say" /> Prefer not to say</label>
+                </div>
+                <div style="margin-top: 18px;">
+                    <label>Hobbies</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="hobbies" value="reading" /> Reading</label>
+                        <label><input type="checkbox" name="hobbies" value="coding" /> Coding</label>
+                        <label><input type="checkbox" name="hobbies" value="playing_sports" /> Playing Sports</label>
+                        <label><input type="checkbox" name="hobbies" value="watching_movies" /> Watching Movies</label>
+                        <label><input type="checkbox" name="hobbies" value="playing_games" /> Playing Games</label>
+                        <label><input type="checkbox" name="hobbies" value="music" /> Music</label>
+                    </div>
+                </div>
+                <div class="input-box" style="margin-top: 18px;">
+                    <label for="address">Complete Address</label>
+                    <textarea id="address" name="address" placeholder="Street, Barangay, City, Province"></textarea>
+                    <small>Maximum of 250 characters.</small>
+                </div>
+            </fieldset>
+            <div class="buttons">
+                <button type="submit" class="submit">Submit</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

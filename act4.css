@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #f3e8ff 0%, #efe2ff 50%, #f9f5ff 100%);
+    color: #3f2d56;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(161, 125, 208, 0.35);
+    border-radius: 24px;
+    padding: 32px 34px;
+    box-shadow: 0 20px 45px rgba(112, 81, 176, 0.12);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 2.3rem;
+    color: #5f3e78;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+ul,
+ol {
+    margin: 0 0 24px 0;
+    padding-left: 36px;
+    line-height: 1.72;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+li {
+    margin-bottom: 0.9rem;
+    padding: 10px 16px;
+    border-radius: 16px;
+    background: rgba(158, 122, 201, 0.12);
+    border: 1px solid rgba(158, 122, 201, 0.22);
+}
+
+ol[type="a"],
+ol[type="A"],
+ol[type="i"],
+ol[type="II"],
+ol[type="square"],
+ol[type="disc"],
+ol[type="circle"] {
+    padding-left: 20px;
+}
+
+ol li {
+    background: rgba(191, 156, 216, 0.16);
+}
+
+ul li {
+    background: rgba(212, 183, 236, 0.28);
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 720px) {
+    .container {
+        padding: 24px 20px;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    ul,
+    ol {
+        padding-left: 28px;
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rynel's Diners Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef4fb;
+            color: #102a43;
+            display: flex;
+            justify-content: center;
+            padding: 24px;
+        }
+        main {
+            width: min(1100px, 100%);
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 24px 60px rgba(16, 43, 77, 0.12);
+            padding: 32px;
+        }
+        h1 {
+            margin: 0 0 18px;
+            text-align: center;
+            font-size: 2.4rem;
+            color: #0f3b71;
+        }
+        p {
+            margin: 0;
+            text-align: center;
+            color: #4c6480;
+            font-size: 1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+        }
+        th, td {
+            border: 1px solid #d9e4ef;
+            padding: 16px;
+            vertical-align: top;
+        }
+        th {
+            background: #eef5ff;
+            color: #0f3b71;
+            text-align: left;
+        }
+        td img {
+            display: block;
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            border-radius: 16px;
+        }
+        ul, ol {
+            margin: 8px 0 0;
+            padding-left: 1.25rem;
+            color: #243648;
+        }
+        @media (max-width: 800px) {
+            body {
+                padding: 16px;
+            }
+            main {
+                padding: 22px;
+            }
+            table, th, td {
+                font-size: 0.95rem;
+            }
+            td img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>🍽️ Rynel's Diners 🍽️</h1>
+        <p>Restaurant Menu</p>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Menu</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Main Course</td>
+                <td><img src="pekpek.jpg" alt="Main course dish" /></td>
+                <td>
+                    <strong>Best Sellers</strong>
+                    <ul>
+                        <li>Chicken Adobo</li>
+                        <li>Pork Sisig</li>
+                        <li>Beef Kare-Kare</li>
+                    </ul>
+                </td>
+                <td>Authentic Filipino dishes served with steamed rice.</td>
+            </tr>
+            <tr>
+                <td><img src="bilat.webp" alt="Combo meal" /></td>
+                <td>
+                    <strong>Combo Meals</strong>
+                    <ol>
+                        <li>Adobo Combo + Rice + Iced Tea</li>
+                        <li>Sisig Combo + Rice + Iced Tea</li>
+                        <li>Sinigang Combo + Rice + Iced Tea</li>
+                    </ol>
+                </td>
+                <td>Includes rice and drinks for a complete meal.</td>
+            </tr>
+            <tr>
+                <td>Desserts</td>
+                <td><img src="https://thebakeologie.com/wp-content/uploads/2017/04/Creme-Caramel-Leche-Flan-54-4.jpg" alt="Dessert" /></td>
+                <td>
+                    <strong>Sweet Treats</strong>
+                    <ul style="list-style-type: square;">
+                        <li>Halo-Halo</li>
+                        <li>Leche Flan</li>
+                        <li>Buko Pandan</li>
+                    </ul>
+                </td>
+                <td>Traditional Filipino desserts perfect after every meal.</td>
+            </tr>
+            <tr>
+                <td colspan="2">Beverages</td>
+                <td>
+                    <strong>Cool Drinks</strong>
+                    <ul style="list-style-type: circle;">
+                        <li>Calamansi Juice</li>
+                        <li>Iced Tea</li>
+                        <li>Soft Drinks</li>
+                        <li>Mineral Water</li>
+                    </ul>
+                </td>
+                <td>Refreshing drinks served chilled.</td>
+            </tr>
+        </table>
+    </main>
+</body>

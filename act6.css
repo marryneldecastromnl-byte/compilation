@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2b303d; /* Dark background behind the paper card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #000;
+}
+
+/* Light gray container box matching the photo */
+.card {
+    background-color: #d1d5db;
+    padding: 35px 45px;
+    border-radius: 6px;
+    width: 680px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.user-info {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Main Data Table */
+.scheduling-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid #000;
+    background-color: transparent;
+}
+
+.scheduling-table th, 
+.scheduling-table td {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.scheduling-table th {
+    font-weight: bold;
+}
+
+.scheduling-table td {
+    color: #222;
+}
+
+/* Averages text positioning */
+.averages {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.avg-left {
+    margin-left: 0;
+}
+
+.avg-right {
+    margin-right: 15px;
+}
+
+.gantt-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+/* Gantt Chart Wrapper */
+.gantt-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.gantt-chart {
+    display: flex;
+    width: 75%; /* Controls overall width of the Gantt chart relative to the card */
+    margin-bottom: 40px;
+}
+
+.gantt-chart .block {
+    position: relative;
+    border: 1px solid #000;
+    border-right: none;
+    height: 68px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    background-color: transparent;
+    padding: 8px;
+}
+
+.gantt-chart .block:last-child {
+    border-right: 1px solid #000;
+}
+
+.gantt-chart .process {
+    font-weight: 700;
+}
+
+.gantt-chart .time-range {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #222;
+}
+
+/* Proportional block widths based on time allocation in photo */
+.block-idle { flex: 1.5; }
+.block-p2   { flex: 1.2; }
+.block-p1   { flex: 1.5; }
+.block-p3   { flex: 1.2; }
+.block-p4   { flex: 1.5; }
+
+/* Timeline numbers placed directly underneath the cell borders */
+.time-label {
+    position: absolute;
+    bottom: -22px;
+    font-size: 13px;
+}
+
+.time-start {
+    left: -4px;
+}
+
+.time-end {
+    left: -4px;
+}
+
+.time-final {
+    right: -7px;
+}
